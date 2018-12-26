@@ -1,0 +1,9 @@
+{
+	"title": "charity",
+	"description": "somedescription",
+	"options": [
+		{"name":"facebook_link","type":"text","value":"thedefault2"},
+		{"name":"twitter_link","type":"text","value":"thedefaulttxt"},
+		{"name":"linkedin_link","type":"text","value":"linkedin.com/sth"}
+	]
+}

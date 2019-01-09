@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-StaffEvaluation
+Admin Login: Zof Cms
 </title>
 
 <!-- Bootstrap 3.3.7 -->
@@ -18,7 +18,7 @@ StaffEvaluation
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>ASTU</b>PORTAL</a>
+    <a href="#"><b>Zof</b>Cms</a>
     <!-- <img src="{{url('img/astu-logo.jpeg')}}" class="img-responsive"> -->
   </div>
   <!-- /.login-logo -->

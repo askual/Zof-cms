@@ -22,6 +22,7 @@
   <?php echo \File::get(base_path('Themes/estartup/assets/nice.css')); ?>
 
   </style>
+  <?php echo $__env->yieldContent('script-1'); ?>
   
 </head>
 
@@ -37,10 +38,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <?php if(Route::currentRouteName()=="index"): ?><li class="menu-active"><?php else: ?><li><?php endif; ?><a href="<?php echo e(route('index')); ?>">Home</a></li>
-          
-          
           <?php if(url()->current()==route('blog')): ?><li class="menu-active"><?php else: ?><li><?php endif; ?><a href="<?php echo e(route('blog')); ?>">blog </a></li>              
-          <?php $__currentLoopData = [['contact','Contact us'],['gallery','Gallery'],['resource','Resources']]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slug): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = [['contact','Contact us'],['gallery','Gallery'],['members','Members'],['resource','Resources']]; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slug): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <?php if(url()->current()==route('theme.static_page',['slug'=>$slug[0]])): ?><li class="menu-active"><?php else: ?><li><?php endif; ?><a href="<?php echo e(route('theme.static_page',['slug'=>$slug[0]])); ?>"><?php echo e($slug[1]); ?> </a></li>              
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -147,7 +146,7 @@
   </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
+  <?php echo $__env->yieldContent('script-2'); ?>
   <!-- JavaScript Libraries -->
   <script src="<?php echo e(url('themes/estartup/lib/jquery/jquery.min.js')); ?>"></script>
   <script src="<?php echo e(url('themes/estartup/lib/jquery/jquery-migrate.min.js')); ?>"></script>
@@ -163,6 +162,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="<?php echo e(url('themes/estartup/js/main.js')); ?>"></script>
+  <?php echo $__env->yieldContent('script-3'); ?>
 
 </body>
 </html>

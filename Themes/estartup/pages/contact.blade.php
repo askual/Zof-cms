@@ -4,6 +4,4 @@
 @section('content')
 
 @include('estartup.components.contact')
-
-
 @endsection

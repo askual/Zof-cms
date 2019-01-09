@@ -40,16 +40,17 @@
                   <tr>
                     {{-- <th>No.</th> --}}
                     <th>Name</th>
+                    <th>Version</th>
                     <th>Status</th>
                     <th>Description</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach(Module::all() as $k=>$m)
+                      @foreach($modules as $k=>$m)
                   <tr>
-                  {{-- <td><a href="">{{$k}}</a></td> --}}
                     <td>{{$m}}</td>
+                    <td>V-{{$m->version}}</td>
                     <td>
                       @if($m->enabled())
                       <span class="label label-success">Active</span>
@@ -58,10 +59,18 @@
                       @endif
                     </td>
                     <td>
-                      {{$m->get('description')}}
+                      {{$m->description}}
                     </td>
                     <td>
-                    <a class="btn label label-success" href="{{route('admin.module.status_toggle',['module'=>$m])}}" >Change status</a>
+                      @if($m->enabled())
+                    <a class="btn label label-danger" href="{{route('admin.module.status_toggle',['module'=>$m])}}" >Disable</a>
+                      @else
+                    <a class="btn label label-success" href="{{route('admin.module.status_toggle',['module'=>$m])}}" >Enable</a>
+                      @endif
+                      @if($m->version9 > $m->version)
+                        <a class="btn label label-success" href="{{route('admin.module.update',['module'=>$m])}}" >Update ( to V-{{$m->version9}})</a>
+                      @endif
+                    
                     </td>
                   </tr>
                     @endforeach

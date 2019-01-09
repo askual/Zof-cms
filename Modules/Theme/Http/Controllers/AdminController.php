@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use App\Option;
 use App\Page;
 use App\PageType;
+use App\Helpers\MiscHelper;
 class AdminController extends Controller
 {
     private $theme = "";
@@ -38,12 +39,21 @@ class AdminController extends Controller
 		foreach ($themeOptions as $key => $value) {
 			$value->value = Option::where('name','themes_'.$this->theme.'_'.$value->name)->first()->value;
 		}
+		$optionResults = Option::Where('name', 'like', '%' . 'themes_'.$this->theme . '%')->get();
+		foreach ($optionResults as $value) {
+			// $value->name = "ss";
+			$xyz = strlen('themes_'.$this->theme);
+			$value->name = substr($value->name,$xyz+1);
+		}
+		// $optionResults->
+		// return $optionResults;
 		$sth = [
 			'site_name' => Option::where('name','site_name')->first()->value,
 			'site_description' => Option::where('name','site_description')->first()->value,
 			// 'theme_current'=> $theme_current,
 			'themeSettings' => $themeSettings,
 			'themeOptions' => $themeOptions,
+			'optionResults' => $optionResults
 		];
 		return view('theme::admin.setting',$sth);
 
@@ -73,6 +83,7 @@ class AdminController extends Controller
 			$o1->value  = $value;
 			$o1->save();
 		}
+        MiscHelper::remove_cache();
 		return redirect()->back();
 		return $request->all();
 		return $request->all();

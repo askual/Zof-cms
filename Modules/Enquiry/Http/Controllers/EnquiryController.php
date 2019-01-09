@@ -5,68 +5,20 @@ namespace Modules\Enquiry\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-
+use Modules\Enquiry\Entities\Enquiry;
+use App\Option;
 class EnquiryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * @return Response
-     */
-    public function index()
-    {
-        return view('enquiry::index');
+    private $theme = "";
+    public function __construct(){
+		$this->theme = Option::where('name','theme_current')->first()->value;
     }
-
-    /**
-     * Show the form for creating a new resource.
-     * @return Response
-     */
-    public function create()
-    {
-        return view('enquiry::create');
+    public function show_page($name){
+        return view($this->theme.'.pages.inquiry.'.$name);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     * @param  Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-    }
-
-    /**
-     * Show the specified resource.
-     * @return Response
-     */
-    public function show()
-    {
-        return view('enquiry::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @return Response
-     */
-    public function edit()
-    {
-        return view('enquiry::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     * @param  Request $request
-     * @return Response
-     */
-    public function update(Request $request)
-    {
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     * @return Response
-     */
-    public function destroy()
-    {
+    public function user_submit(Request $request){
+        $input = Collect($request->all())->except(['_token','from'])->toArray();
+        Enquiry::create(['from'=>$request['from'],'body'=>$input]);
+        return redirect('/');
     }
 }

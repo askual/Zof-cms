@@ -1,6 +1,7 @@
 {
     "name": "Blog",
     "alias": "blog",
+    "version": "0.2",
     "description": "",
     "keywords": [],
     "active": 1,
@@ -10,5 +11,5 @@
     ],
     "aliases": [],
     "files": [],
-    "requires": []
+    "requires": ["hehe"]
 }

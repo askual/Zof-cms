@@ -19,18 +19,18 @@ class PageController extends Controller{
     }
 
 
-    public function join(){
-		return view( $this->theme.'.join');
-    }
+    // public function join(){
+	// 	return view( $this->theme.'.join');
+    // }
 
-    public function inquiry($name){
-        return view($this->theme.'.pages.inquiry.'.$name);
-    }
-    public function enquiry_submit(Request $request){
-        $input = Collect($request->all())->except(['_token','from'])->toArray();
-        Enquiry::create(['from'=>$request['from'],'body'=>$input]);
-        return redirect('/');
-    }
+    // public function inquiry($name){
+    //     return view($this->theme.'.pages.inquiry.'.$name);
+    // }
+    // public function enquiry_submit(Request $request){
+    //     $input = Collect($request->all())->except(['_token','from'])->toArray();
+    //     Enquiry::create(['from'=>$request['from'],'body'=>$input]);
+    //     return redirect('/');
+    // }
 
     public function all($slug){
         $p = Page::where('slug',$slug)->firstOrfail();

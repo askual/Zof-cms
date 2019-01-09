@@ -43,7 +43,7 @@ Artisan::command('ktheme', function () {
     $migrations = DB::table('options')->get();
     $theme = DB::table('options')->where('name','theme_current')->get()[0]->value;
     // $in  =  'resources/views/themes/'.$theme.'/config/theme.json';
-    $json_path = resource_path('views/themes/'.$theme.'/config/theme.json');
+    $json_path = base_path('Themes/'.$theme.'/config/theme.json');
     $handle = file_get_contents($json_path, "r");
     $zjson = json_decode($handle);
     foreach ($zjson->options as $option) {

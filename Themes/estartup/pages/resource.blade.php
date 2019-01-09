@@ -16,7 +16,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-3 col-md-3 ">
             <ul style="font-size:120px">
-                <li>መተዳደሪያ ደንቡ <a href="#"><i class="fa fa-download"></i></a></li>
+                <li>መተዳደሪያ ደንቡ <a href="http://alenethiopia.org/files/1/አለን ኢትዮ (Aut.docx.pdf"><i class="fa fa-download"></i></a></li>
             </ul>
         </div>
     </div>

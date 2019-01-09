@@ -36,16 +36,17 @@
                   <tr>
                     
                     <th>Name</th>
+                    <th>Version</th>
                     <th>Status</th>
                     <th>Description</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                      <?php $__currentLoopData = Module::all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $k=>$m): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                      <?php $__currentLoopData = $modules; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $k=>$m): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <tr>
-                  
                     <td><?php echo e($m); ?></td>
+                    <td>V-<?php echo e($m->version); ?></td>
                     <td>
                       <?php if($m->enabled()): ?>
                       <span class="label label-success">Active</span>
@@ -54,11 +55,19 @@
                       <?php endif; ?>
                     </td>
                     <td>
-                      <?php echo e($m->get('description')); ?>
+                      <?php echo e($m->description); ?>
 
                     </td>
                     <td>
-                    <a class="btn label label-success" href="<?php echo e(route('admin.module.status_toggle',['module'=>$m])); ?>" >Change status</a>
+                      <?php if($m->enabled()): ?>
+                    <a class="btn label label-danger" href="<?php echo e(route('admin.module.status_toggle',['module'=>$m])); ?>" >Disable</a>
+                      <?php else: ?>
+                    <a class="btn label label-success" href="<?php echo e(route('admin.module.status_toggle',['module'=>$m])); ?>" >Enable</a>
+                      <?php endif; ?>
+                      <?php if($m->version9 > $m->version): ?>
+                        <a class="btn label label-success" href="<?php echo e(route('admin.module.update',['module'=>$m])); ?>" >Update ( to V-<?php echo e($m->version9); ?>)</a>
+                      <?php endif; ?>
+                    
                     </td>
                   </tr>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

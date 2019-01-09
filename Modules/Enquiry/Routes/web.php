@@ -5,8 +5,9 @@
 // });
 
 Route::prefix('enquiry')->group(function() {
-    Route::get('/', 'EnquiryController@index')->name('enquiry');
-    // Route::get('/post/{slug}', 'BlogController@single_post')->name('single_post');
+    // Route::get('/', 'EnquiryController@index')->name('enquiry');
+    Route::get('/page/{name}', 'EnquiryController@show_page')->name('enquiry.show');
+    Route::post('/submit', 'EnquiryController@user_submit')->name('enquiry.submit');
 });
 Route::prefix('admin/enquiry')->group(function() {
     Route::get('/', 'AdminController@index')->name('enquiry.admin.index');

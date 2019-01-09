@@ -1,6 +1,7 @@
 {
     "name": "Enquiry",
     "alias": "enquiry",
+    "version": "0.1",
     "description": "",
     "keywords": [],
     "active": 1,

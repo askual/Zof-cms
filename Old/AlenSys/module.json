@@ -1,0 +1,15 @@
+{
+    "name": "AlenSys",
+    "alias": "alensys",
+    "version": "0.1",
+    "description": "A registration system of alenethiopia",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\AlenSys\\Providers\\AlenSysServiceProvider"
+    ],
+    "aliases": [],
+    "files": [],
+    "requires": []
+}

@@ -55,13 +55,13 @@
                 <?php elseif($option->type="image"): ?>
                 <div class="input-group">
                   <span class="input-group-btn">
-                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                  <a id="lfm<?php echo e($option->name); ?>" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
                       <i class="fa fa-picture-o"></i> Choose
                     </a>
                   </span>
                   <input name="<?php echo e($option->name); ?>" id="thumbnail" class="form-control" type="text" value="<?php echo e($option->value); ?>">
                 </div>
-                <img id="holder" style="margin-top:15px;max-height:100px;" src="<?php echo e(url('/photos/1/hero1.jpg')); ?>">
+                <img id="holder" style="margin-top:15px;max-height:100px;" src="<?php echo e(url('/photos/1/CSEC LOGO.png')); ?>">
                 <?php endif; ?>
             </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -142,8 +142,12 @@
 
   </script>
   <script>
-    $('#lfm').filemanager('image', {prefix: route_prefix});
-    $('#lfm2').filemanager('file', {prefix: route_prefix});
+      <?php $__currentLoopData = $themeOptions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <?php if($option->type=="image"): ?>
+        $('#lfm<?php echo e($option->name); ?>').filemanager('image', {prefix: route_prefix});
+        // $('#lfm2').filemanager('file', {prefix: route_prefix});
+        <?php endif; ?>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </script>
 
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">

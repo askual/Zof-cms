@@ -1115,7 +1115,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 /* Newsletter Section
 --------------------------------*/
 #newsletter {
-  background: transparent url(../img/newsletter-bg.jpg) no-repeat center top fixed;
+  /* background: transparent url(../img/newsletter-bg.jpg) no-repeat center top fixed; */
   background-size: cover;
 }
 

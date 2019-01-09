@@ -15,7 +15,7 @@
       <h1>Welcome to Alen Ethiopia</h1>
       <h2>ሰው ልጆች የለውጥ ማእከል  </h2> 
       <img src="{{url('@theme('hero_image_1')')}}" alt="Hero Imgs">
-      <a href="{{route('inquiry',['name'=>'join-us'])}}" class="btn-get-started scrollto">Join Us</a>
+      <a href="{{route('enquiry.show',['name'=>'join-us'])}}" class="btn-get-started scrollto">Join Us</a>
       <div class="btns">
           <!-- <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
           <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
@@ -541,17 +541,16 @@
   <!--==========================
     Newsletter Section
   ============================-->
-  <section id="newsletter" class="newsletter text-center wow fadeInUp">
+  
+  <section id="newsletter" class="newsletter2 newsletter text-center wow fadeInUp">
     <div class="overlay padd-section">
       <div class="container">
-
         <div class="row justify-content-center">
           <div class="col-md-9 col-lg-6">
             <form class="form-inline" method="POST" action="#">
 
               <input type="email" class="form-control " placeholder="Email Adress" name="email">
               <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
-
             </form>
 
           </div>
@@ -574,4 +573,14 @@
 
   
 
+  @endsection
+
+
+  @section('script-2')
+  <style>
+  #newsletter2 {
+    background: transparent url('{{url('@theme('bottom_image_1')')}}') no-repeat center top fixed;
+    /* background-size: cover; */
+  }
+  </style>
   @endsection

@@ -1,6 +1,7 @@
 {
     "name": "Theme",
     "alias": "theme",
+    "version": "0.1",
     "description": "",
     "keywords": [],
     "active": 1,

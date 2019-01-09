@@ -21,6 +21,7 @@
   <style>
   {!! \File::get(base_path('Themes/estartup/assets/nice.css')) !!}
   </style>
+  @yield('script-1')
   {{-- {!! \File::get(base_path('Themes/estartup/config/theme.json')) !!} --}}
 </head>
 
@@ -36,10 +37,8 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           @if(Route::currentRouteName()=="index")<li class="menu-active">@else<li>@endif<a href="{{route('index')}}">Home</a></li>
-          
-          
           @if(url()->current()==route('blog'))<li class="menu-active">@else<li>@endif<a href="{{route('blog')}}">blog </a></li>              
-          @foreach ([['contact','Contact us'],['gallery','Gallery'],['resource','Resources']] as $slug)
+          @foreach ([['contact','Contact us'],['gallery','Gallery'],['members','Members'],['resource','Resources']] as $slug)
           @if(url()->current()==route('theme.static_page',['slug'=>$slug[0]]))<li class="menu-active">@else<li>@endif<a href="{{route('theme.static_page',['slug'=>$slug[0]])}}">{{$slug[1]}} </a></li>              
           @endforeach
 
@@ -156,7 +155,7 @@
   </footer>
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
+  @yield('script-2')
   <!-- JavaScript Libraries -->
   <script src="{{url('themes/estartup/lib/jquery/jquery.min.js')}}"></script>
   <script src="{{url('themes/estartup/lib/jquery/jquery-migrate.min.js')}}"></script>
@@ -172,6 +171,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{url('themes/estartup/js/main.js')}}"></script>
+  @yield('script-3')
 
 </body>
 </html>

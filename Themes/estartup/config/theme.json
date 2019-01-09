@@ -1,10 +1,12 @@
 {
 	"title": "estartup",
 	"description": "somedescription",
+	"version": 0.1,
 	"options": [
 		{"name":"facebook_link","type":"text","value":"thedefault2"},
 		{"name":"twitter_link","type":"text","value":"thedefaulttxt"},
 		{"name":"linkedin_link","type":"text","value":"linkedin.com/sth"},
-		{"name":"hero_image_1","type":"image","value":"/theme2/img/top-1.jpg","description":"can be found on the home page"}
+		{"name":"hero_image_1","type":"image","value":"/theme2/img/top-1.jpg","description":"can be found on the home page"},
+		{"name":"bottom_image_1","type":"image","value":"/theme2/img/top-1.jpg","description":"can be found on the home page bottom section"}
 	]
 }

@@ -57,7 +57,7 @@
                 @elseif($option->type="image")
                 <div class="input-group">
                   <span class="input-group-btn">
-                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                  <a id="lfm{{$option->name}}" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
                       <i class="fa fa-picture-o"></i> Choose
                     </a>
                   </span>
@@ -143,8 +143,12 @@
     {!! \File::get(base_path('vendor/unisharp/laravel-filemanager/public/js/lfm.js')) !!}
   </script>
   <script>
-    $('#lfm').filemanager('image', {prefix: route_prefix});
-    $('#lfm2').filemanager('file', {prefix: route_prefix});
+      @foreach($themeOptions as $option)
+      @if($option->type=="image")
+        $('#lfm{{$option->name}}').filemanager('image', {prefix: route_prefix});
+        // $('#lfm2').filemanager('file', {prefix: route_prefix});
+        @endif
+        @endforeach
   </script>
 
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">

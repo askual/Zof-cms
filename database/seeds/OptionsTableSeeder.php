@@ -44,7 +44,7 @@ class OptionsTableSeeder extends Seeder
             // ['name' => '', 'value'=> ''],    
         ];
         foreach($options as $option){
-            App\Option::create($option);
+            Modules\Zof\Entities\Option::create($option);
         }
         
     }

@@ -1,25 +1,12 @@
 {
-    "name": "nwidart/media",
-    "description": "",
+    "name": "deqiq/media",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "deqiq",
+            "email": "kibdemta@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Modules\\Media\\Providers\\MediaServiceProvider"
-            ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Media\\": ""
-        }
+    "require": {
+        "composer/composer": "^1.8"
     }
 }

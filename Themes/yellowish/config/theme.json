@@ -1,0 +1,10 @@
+{
+	"title": "yellowish",
+	"description": "official theme of askual.com",
+	"version": 0.1,
+	"options": [
+		{"name":"facebook_link","type":"text","value":"http://facebook.com/askualtech"},
+		{"name":"twitter_link","type":"text","value":"http://twitter.com/askualtech"},
+		{"name":"linkedin_link","type":"text","value":"http://linkedin.com/org/askualtech"}
+	]
+}

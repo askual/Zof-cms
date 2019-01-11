@@ -23,6 +23,20 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/../vendor/autoload.php';
 
+// $in  =  app_path('zof.json');
+// $d = dir('../Modules');
+// while (false !== ($entry = $d->read())) {
+//     if($entry!=".." && $entry!="." && $entry!=".gitkeep"){
+//         require __DIR__.'/../Modules/'.$entry.'/vendor/autoload.php';
+//     }
+// }
+// 	$seedFile = substr($entry,0,strlen($entry)-4);
+// 	Artisan::call('db:seed', [
+//         '--class' => '\\Modules\\'.$module.'\\Database\\Seeders\\'.$seedFile
+//     ]);
+// }
+// $d->close();  
+
 /*
 |--------------------------------------------------------------------------
 | Turn On The Lights

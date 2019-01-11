@@ -18,7 +18,7 @@ class IsAdmin
         if(Auth::user()==null){
             return redirect()->route('admin.login');
         }
-        if (Auth::user()->type=="admin") {
+        if (Auth::user()->isadmin) {
             return $next($request);
         }
     }

@@ -1,25 +1,12 @@
 {
-    "name": "nwidart/alensys",
-    "description": "",
+    "name": "deqiq/alen-sys",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "deqiq",
+            "email": "kibdemta@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Modules\\AlenSys\\Providers\\AlenSysServiceProvider"
-            ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\AlenSys\\": ""
-        }
+    "require": {
+        "defuse/php-encryption": "^2.2"
     }
 }

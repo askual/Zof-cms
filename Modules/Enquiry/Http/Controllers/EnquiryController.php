@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\Enquiry\Entities\Enquiry;
-use App\Option;
+use Modules\Zof\Entities\Option;
 class EnquiryController extends Controller
 {
     private $theme = "";

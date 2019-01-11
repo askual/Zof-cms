@@ -1,0 +1,15 @@
+{
+    "name": "Zof",
+    "alias": "zof",
+    "version": 0.1,
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Zof\\Providers\\ZofServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

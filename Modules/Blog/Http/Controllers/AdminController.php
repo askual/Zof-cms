@@ -6,13 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 
-use App\Enquiry;
 use Modules\Blog\Entities\Post;
-// use App\Post;
-use App\Page;
-use App\Option;
-use App\Media;
-use App\PageType;
+use Modules\Zof\Entities\Option;
 class AdminController extends Controller
 {
     private $theme = "";
@@ -62,11 +57,8 @@ class AdminController extends Controller
     	return redirect()->back();
     }
     public function index(){
-		// $posts = Post::all();
 		$posts = Post::orderBy('id','desc')->paginate(10);
-		// $posts = Post::paginate(10);
     	return view('blog::admin.create',[
-    		'enquiries' => Enquiry::all(),
     		'posts' => $posts,
     	]);
 	}

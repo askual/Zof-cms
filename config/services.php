@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '190841044659032',
+        'client_secret' => '9c2b311f1b2d574f504f51890ae16b05',
+        'redirect' => 'https://askual.com/login/facebook/callback',
+    ],
+
 ];

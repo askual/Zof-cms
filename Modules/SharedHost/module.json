@@ -1,0 +1,15 @@
+{
+    "name": "SharedHost",
+    "alias": "sharedhost",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "version": 0.1,
+    "order": 0,
+    "providers": [
+        "Modules\\SharedHost\\Providers\\SharedHostServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

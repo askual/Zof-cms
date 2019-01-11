@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/sharedhost",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\SharedHost\\Providers\\SharedHostServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\SharedHost\\": ""
+        }
+    }
+}

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
-use App\Option;
+use Modules\Zof\Entities\Option;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -26,32 +26,18 @@ class AppServiceProvider extends ServiceProvider
         View::share('option_site_name', Option::where('name','site_name')->first()->value);
         View::share('option_site_description', Option::where('name','site_description')->first()->value);
         Blade::directive('theme', function ($expression) {
-            // return $expression;
-            $theme = DB::table('options')->where('name','theme_current')->get()[0]->value;
+            $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
             $expression2 = substr($expression, 1,strlen($expression)-1);
             $row_name = "themes_".$theme."_".$expression2;
-            $answer = DB::table('options')->where('name',substr($row_name,0,strlen($row_name)-1))->get()[0]->value;
-            // return ; 
-            return $answer;
-            return "<?php echo '$answer' ?>";
+            if(isset(DB::table('zof-options')->where('name',substr($row_name,0,strlen($row_name)-1))->get()[0]->value )){
+                return DB::table('zof-options')->where('name',substr($row_name,0,strlen($row_name)-1))->get()[0]->value;
+            }
+            return "error";
         });
-        // Blade::directive('p', function($expression) {
-        //     $output = $expression ? $expression : "1";
-        //     // list($expression1, $expression2) = explode(', ', $expression);
-        //     // $output = $expression1 ? $expression1 : $expression2;
-        //     return "<?php echo {$output}; ";
-        // });
-        // Nwidart\Modules->app['modules']->boot()
-        // Module::boot();
+        
     }
+    
+    public function register(){
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
     }
 }

@@ -14,7 +14,6 @@
 Route::prefix('blog')->group(function() {
     Route::get('/', 'BlogController@index')->name('blog');
     Route::get('/post/{slug}', 'BlogController@single_post')->name('single_post');
-
 });
 Route::prefix('admin/blog')->group(function() {
     Route::get('/', 'AdminController@index')->name('blog.admin.index');

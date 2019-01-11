@@ -14,12 +14,24 @@ use Illuminate\Foundation\Inspiring;
 */
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Hash;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
 
 
+Artisan::command('createsuperuser', function () {
+    $email = $this->ask('email');
+    $password = $this->ask('password');
+    Modules\Accounts\Entities\User::create([
+        'name' => 'admin', 
+        'email' => $email, 
+        'password'=> Hash::make($password),
+        'isadmin' => 1
+    ]);
+    $this->info('superadmin Created');
+});
 
 Artisan::command('kdrop', function () {
     $list = $this->ask('list tables?');

@@ -6,10 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\AlenSys\Entities\Member;
-
+use Modules\AlenSys\Helpers\CypherHelper;
 class AdminController extends Controller
 {
+    public function __construct(){
+		$this->middleware('isAdmin');
+    }
     public function payment(){
+        return CypherHelper::cypher('Kibru Demeke');
         return view('alensys::admin.payment');
     }
     public function members(){

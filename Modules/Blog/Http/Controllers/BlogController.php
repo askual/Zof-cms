@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 
-use App\Option;
+use Modules\Zof\Entities\Option;
 use Modules\Blog\Entities\Post;
 use Modules\Blog\Entities\Category;
 class BlogController extends Controller
@@ -17,10 +17,10 @@ class BlogController extends Controller
     }
     public function index(){
 		$posts = Post::orderBy('id','desc')->paginate(10);        
-    	return view( $this->theme.'.pages.blog',['posts'=>$posts]);
+    	return view( $this->theme.'.module.blog',['posts'=>$posts]);
     }
     public function single_post($slug){
         $post = Post::where('slug',$slug)->first();
-        return view( $this->theme.'.pages.blog_single',['post'=>$post] );
+        return view( $this->theme.'.module.blog_single',['post'=>$post] );
     }
 }

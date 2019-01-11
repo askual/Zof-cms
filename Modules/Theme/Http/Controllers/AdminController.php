@@ -5,17 +5,35 @@ namespace Modules\Theme\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use App\Option;
-use App\Page;
-use App\PageType;
+use Modules\Zof\Entities\Option;
 use App\Helpers\MiscHelper;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 class AdminController extends Controller
 {
     private $theme = "";
     public function __construct(){
 		$this->middleware('isAdmin');
 		$this->theme = Option::where('name','theme_current')->first()->value;
-    }
+	}
+	public function theme_install($theme){
+		$migrations = DB::table('options')->get();
+		// $theme = DB::table('options')->where('name','theme_current')->get()[0]->value;
+		// $in  =  'resources/views/themes/'.$theme.'/config/theme.json';
+		$json_path = base_path('Themes/'.$this->theme.'/config/theme.json');
+		$handle = file_get_contents($json_path, "r");
+		$zjson = json_decode($handle);
+		foreach ($zjson->options as $option) {
+			$row_name = "themes_".$this->theme."_".$option->name;
+			$exists = sizeof(DB::table('options')->where('name',$row_name)->get());
+			if($exists==0){
+				DB::table('options')->insert(
+					['name' => $row_name, 'value' => $option->value]
+				);
+				echo($row_name." inserted");
+			}
+		}
+	}
     public function setting(){
 		$themeSettings = [];
 		$d = dir(base_path('Themes'));

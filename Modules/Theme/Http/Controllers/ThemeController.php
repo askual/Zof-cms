@@ -5,12 +5,24 @@ namespace Modules\Theme\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use App\Option;
+use Modules\Blog\Http\Controllers\BlogController;
+use Modules\Zof\Entities\Option;
+use Illuminate\Support\Facades\URL;
 class ThemeController extends Controller
 {
     private $theme = "";
     public function __construct(){
         $this->theme = Option::where('name','theme_current')->first()->value; 
+    }
+    public function dynamic_page($slug){
+        if ($slug == "blog") {
+            $s = new BlogController;
+            return $s->index();
+        }elseif($slug == "wer"){
+
+        }else{
+            return view($this->theme.'.pages.'.$slug);
+        }
     }
     public function static_page($slug){
         // return "ddd";
@@ -26,5 +38,7 @@ class ThemeController extends Controller
             // }
             // return View::first([ $this->theme.'.page', $this->theme.'.all'], ['page'=>$p,'widgets'=>$widgets]);
             return view($this->theme.'.pages.'.$slug);
-    }
+        }
+        
+        
 }

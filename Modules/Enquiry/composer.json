@@ -1,25 +1,12 @@
 {
-    "name": "nwidart/enquiry",
-    "description": "",
+    "name": "deqiq/enquiry",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "deqiq",
+            "email": "kibdemta@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Modules\\Enquiry\\Providers\\EnquiryServiceProvider"
-            ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Enquiry\\": ""
-        }
+    "require": {
+        "composer/composer": "^1.8"
     }
 }

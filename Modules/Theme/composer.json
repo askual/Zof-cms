@@ -1,25 +1,12 @@
 {
-    "name": "nwidart/theme",
-    "description": "",
+    "name": "deqiq/theme",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "deqiq",
+            "email": "kibdemta@gmail.com"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Modules\\Theme\\Providers\\ThemeServiceProvider"
-            ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\Theme\\": ""
-        }
+    "require": {
+        "composer/composer": "^1.8"
     }
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-  Alen Admin: <?php echo $__env->yieldContent('title'); ?>
+  Zof-Admin: <?php echo $__env->yieldContent('title'); ?>
 </title>
   <link rel="stylesheet" href="<?php echo e(url('adminlte/bootstrap/css/bootstrap.min.css')); ?>">
   <link rel="stylesheet" href="<?php echo e(url('bower_components/font-awesome/css/font-awesome.min.css')); ?>">

@@ -9,12 +9,17 @@ use Modules\Zof\Entities\Option;
 use App\Helpers\MiscHelper;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Analytics;
+use Spatie\Analytics\Period;
 class AdminController extends Controller
 {
     private $theme = "";
     public function __construct(){
 		$this->middleware('isAdmin');
 		$this->theme = Option::where('name','theme_current')->first()->value;
+	}
+	public function analytics(){
+		return Analytics::fetchMostVisitedPages(Period::days(30));
 	}
 	public function theme_install($theme){
 		$migrations = DB::table('options')->get();

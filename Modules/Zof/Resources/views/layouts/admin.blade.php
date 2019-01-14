@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-  Alen Admin: @yield('title')
+  Zof-Admin: @yield('title')
 </title>
   <link rel="stylesheet" href="{{ url('adminlte/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">

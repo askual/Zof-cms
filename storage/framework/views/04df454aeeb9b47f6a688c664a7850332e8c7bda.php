@@ -1,4 +1,18 @@
-<?php $__env->startSection('content'); ?>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/png" href="<?php echo e(asset('vendor/laravel-filemanager/img/folder.png')); ?>">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/cropper.min.css')); ?>">
+    <style><?php echo \File::get(base_path('vendor/unisharp/laravel-filemanager/public/css/lfm.css')); ?></style>
+    
+    
+    <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/mfb.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/dropzone.min.css')); ?>">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.css">
+</head>
+<body>
+
   <div class="container-fluid" id="wrapper">
     <div class="panel panel-primary hidden-xs">
       <div class="panel-heading">
@@ -121,22 +135,6 @@
     <img src="<?php echo e(asset('vendor/laravel-filemanager/img/loader.svg')); ?>">
   </div>
 
-<?php $__env->stopSection(); ?>
-
-<?php $__env->startSection('css'); ?>
-  <link rel="shortcut icon" type="image/png" href="<?php echo e(asset('vendor/laravel-filemanager/img/folder.png')); ?>">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/cropper.min.css')); ?>">
-  <style><?php echo \File::get(base_path('vendor/unisharp/laravel-filemanager/public/css/lfm.css')); ?></style>
-  
-  
-  <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/mfb.css')); ?>">
-  <link rel="stylesheet" href="<?php echo e(asset('vendor/laravel-filemanager/css/dropzone.min.css')); ?>">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.css">
-<?php $__env->stopSection(); ?>
-
-<?php $__env->startSection('js'); ?>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
@@ -202,7 +200,8 @@
       maxFilesize: (<?php echo e(lcfirst(str_singular(request('type') ?: '')) == 'image' ? config('lfm.max_image_size') : config('lfm.max_file_size')); ?> / 1000)
     }
   </script>
-<?php $__env->stopSection(); ?>
+</body>
+</html>
 
 
 
@@ -232,4 +231,3 @@
 </html>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('admin.layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

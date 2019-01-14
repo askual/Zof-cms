@@ -36,6 +36,9 @@ Route::prefix('admin')->group(function() {
     Route::prefix('theme')->group(function() {
         Route::get('/setting', 'AdminController@setting')->name('admin.theme.setting');
         Route::post('/setting', 'AdminController@setting_edit')->name('admin.theme.setting.post');
+
+        Route::get('/analytics', 'AdminController@analytics')->name('admin.theme.analytics');
+
         Route::post('/setting_theme', 'AdminController@setting_theme_edit')->name('admin.theme.theme_setting.post');
 
         Route::get('/install/{theme}', 'AdminController@theme_install')->name('admin.theme.theme_install');

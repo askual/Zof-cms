@@ -4,7 +4,10 @@
     "version": 0.1,
     "description": "",
     "keywords": [],
+    "base_link": "http://api.askual.com/zof",
     "active": 1,
+    "icon": "",
+    "priority": 100,
     "order": 0,
     "providers": [
         "Modules\\Zof\\Providers\\ZofServiceProvider"

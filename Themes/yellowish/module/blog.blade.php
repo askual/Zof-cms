@@ -39,29 +39,23 @@
 
 
         <div class="row prod-card">
-            <?php
-            $hh = ['1','2','3'];
-            foreach($posts as $k=>$post){
-            ?>
+            @foreach($posts as $k=>$post)
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="card product-card">
                     <div class="text-center py-1">
-                        <img src="{{$post->picture}}" alt="" class="blog-pics">
+                        <img src="{{$post->picture}}" alt="" class="blog-pics img-fluid">
                     </div>
                     <div class="card-body text-center">
                         <h3>{{$post->title}}</h3>
-                        <h5 class="text-grey">By Kibru Demeke</h5>
-                        <small> <?=$post->excerpt?> </small>
+                        <h5 class="text-grey">By Askual Tech</h5>
+                        {{-- <small> $post->excerpt </small> --}}
                     </div>
                     <div class="text-center form-control">
                         <a href="{{route('single_post',['slug'=>$post->slug])}}"><button class="btn btn-sm">Read more</button></a>
                     </div>
                 </div>
             </div>
-            <?php
-                
-            }
-            ?>
+            @endforeach
             
         </div>
     </div>

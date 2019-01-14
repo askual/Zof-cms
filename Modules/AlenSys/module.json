@@ -4,6 +4,8 @@
     "version": "0.2",
     "description": "A registration system of alenethiopia",
     "keywords": [],
+    "icon": "fa-files-o",
+    "priority": 91,
     "active": 1,
     "order": 0,
     "providers": [

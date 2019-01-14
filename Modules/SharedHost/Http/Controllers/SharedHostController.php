@@ -2,7 +2,7 @@
 
 namespace Modules\SharedHost\Http\Controllers;
 
-use App\Helpers\MiscHelper;
+use Modules\Zof\Helpers\MiscHelper;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;

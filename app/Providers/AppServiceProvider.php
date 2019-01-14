@@ -14,12 +14,10 @@ class AppServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
+     * 
      * @return void
      */
-    public function boot()
-    {
-       
+    public function boot(){  
         // Relation::morphMap([
         // ]);
         Schema::defaultStringLength(191);

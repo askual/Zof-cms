@@ -5,6 +5,8 @@
     "description": "",
     "keywords": [],
     "active": 1,
+    "icon": "",
+    "priority": 100,
     "order": 0,
     "providers": [
         "Modules\\Theme\\Providers\\ThemeServiceProvider"

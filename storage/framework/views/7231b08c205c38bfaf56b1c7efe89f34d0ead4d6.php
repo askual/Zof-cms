@@ -61,7 +61,7 @@
                   </span>
                   <input name="<?php echo e($option->name); ?>" id="thumbnail" class="form-control" type="text" value="<?php echo e($option->value); ?>">
                 </div>
-                <img id="holder" style="margin-top:15px;max-height:100px;" src="<?php echo e(url('/photos/1/CSEC LOGO.png')); ?>">
+                <img id="holder" style="margin-top:15px;max-height:100px;" src="<?php echo e(url('error')); ?>">
                 <?php endif; ?>
             </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -199,4 +199,4 @@
   <?php $__env->stopSection(); ?>
 
 
-<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('zof::layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

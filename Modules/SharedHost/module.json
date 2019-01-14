@@ -6,6 +6,8 @@
     "active": 1,
     "version": 0.1,
     "order": 0,
+    "icon": "",
+    "priority": 100,
     "providers": [
         "Modules\\SharedHost\\Providers\\SharedHostServiceProvider"
     ],

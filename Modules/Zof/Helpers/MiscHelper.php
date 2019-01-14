@@ -17,7 +17,7 @@ class MiscHelper
         $files = glob($folder . '/*');
         
         //Loop through the file list.
-        foreach($files as $file){
+        foreach($files as $file) {
             //Make sure that this is a file and not a directory.
             if(is_file($file)){
                 //Use the unlink function to delete the file.

@@ -13,3 +13,5 @@ Route::prefix('admin/media')->group(function() {
 });
 
 
+Route::get('/photos/{name}','MediaController@storage')->where('name', '.*')->name('storage.photos');
+Route::get('/files/{name}','MediaController@files')->where('name', '.*')->name('storage.files');

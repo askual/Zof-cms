@@ -5,6 +5,8 @@
     "description": "",
     "keywords": [],
     "active": 1,
+    "icon": "fa-question-circle",
+    "priority": 100,
     "order": 0,
     "providers": [
         "Modules\\Enquiry\\Providers\\EnquiryServiceProvider"

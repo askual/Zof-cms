@@ -78,6 +78,11 @@ class AdminController extends Controller
 	}
     public function index(){
 		// $v =  ModuleHelper::version('dd');
+		// return \Module::collections()->sortBy('priority')->all();
+		// $sorted = \Module::collections()->sortBy(function ($product, $key) {
+		// 	return $product->priority;
+		// });
+		// return $sorted;
 		$modules = \Module::all();
 		foreach($modules as $m){
 			$m->version9 = ModuleHelper::new_version($m->alias);

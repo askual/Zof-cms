@@ -1,5 +1,5 @@
 
-@extends('layouts.admin')
+@extends('zof::layouts.admin')
 
 
 @section('content')

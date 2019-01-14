@@ -5,7 +5,7 @@
 <title>
   Alen Admin: @yield('title')
 </title>
-  <link rel="stylesheet" href="{{ url('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('adminlte/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
   <link rel="stylesheet" href="{{ url('bower_components/Ionicons/css/ionicons.min.css') }}">
   @yield('css')
@@ -20,8 +20,8 @@
 
   <header class="main-header">
     <a href="{{route('admin.index')}}" class="logo">
-      <span class="logo-mini"><b>A</b>P</span>
-      <span class="logo-lg"><b>Alen</b><small>Ethiopia</small></span>
+      <span class="logo-mini"><b>Z</b>C</span>
+      <span class="logo-lg"><b>Zof</b><small>Cms</small></span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -51,11 +51,19 @@
           </ul>
         </li> --}}
 
-        @foreach(Module::collections() as $m)
+        
+        {{-- @foreach(Module::collections()->sortBy('priority') as $m) --}}
+        
+        <?php
+        $sortedModules = Module::collections()->sortBy(function ($product, $key) {
+          return $product->priority;
+        });
+        ?>
+        @foreach($sortedModules as $m)
         @if(null !== config($m->getLowerName().'.admin-routes'))
           <li id="{{$m->getLowerName()}}" class="treeview">
           <a href="">
-            <i class="fa fa-files-o"></i>
+          <i class="fa {{$m->icon}}"></i>
             <span>{{config($m->getLowerName().'.name')}}</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

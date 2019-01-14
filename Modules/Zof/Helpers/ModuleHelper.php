@@ -10,13 +10,13 @@ use Modules\Zof\Entities\Option;
 class ModuleHelper
 {
     public static function new_version($modulename){
-        $json_path = app_path('zof-dev.json');
+        $json_path = base_path('Modules/Zof/module.json');
         $handle = file_get_contents($json_path, "r");
         $zjson = json_decode($handle);
-        $ff = @file_get_contents($zjson->base_link.'/zof/module/'.$modulename);
+        $ff = @file_get_contents($zjson->base_link.'/module/'.$modulename);
         $obj = json_decode($ff);
         if(!isset($obj->version)){
-            return "error";
+            return "E-".$zjson->base_link.'/zof/module/'.$modulename;
         }
         return $obj->version; 
     }

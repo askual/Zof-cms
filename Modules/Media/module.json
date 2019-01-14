@@ -5,6 +5,8 @@
     "description": "",
     "keywords": [],
     "active": 1,
+    "icon": "fa-picture-o",
+    "priority": 92,
     "order": 0,
     "providers": [
         "Modules\\Media\\Providers\\MediaServiceProvider"

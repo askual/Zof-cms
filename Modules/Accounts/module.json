@@ -4,6 +4,8 @@
     "version": 0.1,
     "description": "",
     "keywords": [],
+    "icon": "fa-users",
+    "priority": 90,
     "active": 1,
     "order": 0,
     "providers": [

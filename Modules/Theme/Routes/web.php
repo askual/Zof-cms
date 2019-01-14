@@ -14,6 +14,11 @@ Route::get('/privacy', 'PageController@privacy')->name('theme.page.privacy');
 Route::get('/terms', 'PageController@terms')->name('theme.page.terms');
 Route::get('/opensource', 'PageController@opensource')->name('theme.page.opensource');
 
+Route::get('/404', 'PageController@fourofour')->name('theme.page.404');
+Route::get('/500', 'PageController@fiveoo')->name('theme.page.500');
+
+
+Route::get('/crawl','PageController@crawl');
 
 Route::prefix('page')->group(function() {
     // Route::get('/page/{slug}', function($slug){

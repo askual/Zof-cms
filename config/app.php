@@ -164,7 +164,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-        Themsaid\Langman\LangmanServiceProvider::class
+        Themsaid\Langman\LangmanServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
     ],
 

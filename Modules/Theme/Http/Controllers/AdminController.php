@@ -96,6 +96,7 @@ class AdminController extends Controller
 			$o2 = Option::where('name','theme_current')->first();
 			$o2->value  = $request['theme_current'];
 			$o2->save();
+			$this->theme_install($request['theme_current']);
 		}
 		return redirect()->back();
 	}

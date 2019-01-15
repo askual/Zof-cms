@@ -24,7 +24,7 @@ class PageController extends Controller
 
 
     public function crawl(){
-        SitemapGenerator::create('https://askual.com')->writeToFile(public_path('sitemap.xml'));
+        SitemapGenerator::create(URL::to('/'))->writeToFile(public_path('sitemap.xml'));
     }
     public function opensource(){
         return view($this->theme.'.static.opensource');
@@ -33,8 +33,8 @@ class PageController extends Controller
     public function index(){
         SEO::setTitle('Home');
         SEO::setDescription('A software development company from Ethiopia');
-        SEO::opengraph()->setUrl('https://askual.com/');
-        SEO::setCanonical('https://askual.com/');
+        SEO::opengraph()->setUrl(URL::to('/'));
+        SEO::setCanonical(URL::to('/'));
         SEO::opengraph()->addProperty('type', 'website');
         // SEO::opengraph()->addProperty('type', 'articles');
         // SEO::twitter()->setSite('@askualTech');

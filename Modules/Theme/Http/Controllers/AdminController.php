@@ -22,7 +22,7 @@ class AdminController extends Controller
 		return Analytics::fetchMostVisitedPages(Period::days(30));
 	}
 	public function theme_install($theme){
-		$migrations = DB::table('options')->get();
+		$migrations = DB::table('zof-options')->get();
 		// $theme = DB::table('options')->where('name','theme_current')->get()[0]->value;
 		// $in  =  'resources/views/themes/'.$theme.'/config/theme.json';
 		$json_path = base_path('Themes/'.$this->theme.'/config/theme.json');
@@ -30,9 +30,9 @@ class AdminController extends Controller
 		$zjson = json_decode($handle);
 		foreach ($zjson->options as $option) {
 			$row_name = "themes_".$this->theme."_".$option->name;
-			$exists = sizeof(DB::table('options')->where('name',$row_name)->get());
+			$exists = sizeof(DB::table('zof-options')->where('name',$row_name)->get());
 			if($exists==0){
-				DB::table('options')->insert(
+				DB::table('zof-options')->insert(
 					['name' => $row_name, 'value' => $option->value]
 				);
 				echo($row_name." inserted");

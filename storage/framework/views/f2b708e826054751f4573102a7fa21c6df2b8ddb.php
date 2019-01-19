@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  
+  <head>
     <link rel="icon" 
-      type="image/png" 
-      href="https://askual.com/logo.ico">
-      <?php echo SEO::generate(); ?>
+    type="image/png" 
+    href="https://askual.com/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msvalidate.01" content="2AB04CD01159EF4A713F43E3F4236432" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-125073349-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    <?php echo SEO::generate(); ?>
 
-      <?php if(Request::getHost() == "127.0.0.1"): ?>
+    <?php if(Request::getHost() == "127.0.0.1"): ?>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo e(url('bower_components/bootstrap/dist/css/bootstrap.min.css')); ?>" rel="stylesheet">
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="<?php echo e(url('bower_components/font-awesome/css/font-awesome.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(url('bower_components/simple-line-icons/css/simple-line-icons.css')); ?>">
-      <?php else: ?>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <?php else: ?>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="<?php echo e(url('bower_components/simple-line-icons/css/simple-line-icons.css')); ?>">
       <?php endif; ?>

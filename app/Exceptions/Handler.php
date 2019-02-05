@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Modules\Theme\Helpers\ThemeHelper;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
@@ -47,14 +48,7 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception)
     {
         if($this->isHttpException($exception)){
-            switch($exception->getStatusCode()){
-                case 404:
-                    return redirect()->route('theme.page.404');
-                    break;
-                case '500':
-                    return redirect()->route('theme.page.500');
-                    break;
-            }
+            ThemeHelper::httpException();
         }else{
             return parent::render($request, $exception);
         }

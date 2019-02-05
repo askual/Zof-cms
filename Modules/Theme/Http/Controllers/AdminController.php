@@ -18,6 +18,10 @@ class AdminController extends Controller
 		$this->middleware('isAdmin');
 		$this->theme = Option::where('name','theme_current')->first()->value;
 	}
+	public function fourofour(){
+		return "1111";
+		return view('theme::admin.404');
+	}
 	public function analytics(){
 		return Analytics::fetchMostVisitedPages(Period::days(30));
 	}

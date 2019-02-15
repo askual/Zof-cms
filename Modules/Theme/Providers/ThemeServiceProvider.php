@@ -2,6 +2,9 @@
 
 namespace Modules\Theme\Providers;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
@@ -21,6 +24,21 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Blade::directive('theme_img', function ($expression) {
+            $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
+            return file_get_contents(base_path('Themes/'.$theme.'/img/'.$expression));
+            return response(file_get_contents(base_path('Themes/'.$theme.'/img/'.$expression)), 200, [
+                // 'Content-Type' => 'application/xml'
+                'Content-Type' => 'image/png'
+            ]);
+            // $expression2 = substr($expression, 1,strlen($expression)-1);
+            // $row_name = "themes_".$theme."_".$expression2;
+            // if(isset(DB::table('zof-options')->where('name',substr($row_name,0,strlen($row_name)-1))->get()[0]->value )){
+            //     return DB::table('zof-options')->where('name',substr($row_name,0,strlen($row_name)-1))->get()[0]->value;
+            // }
+            return $theme;
+            // return '$theme error';
+        });
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();

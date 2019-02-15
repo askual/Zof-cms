@@ -1,0 +1,12 @@
+{
+    "name": "deqiq/scripts",
+    "authors": [
+        {
+            "name": "deqiq",
+            "email": "kibdemta@gmail.com"
+        }
+    ],
+    "require": {
+        "claviska/simpleimage": "^3.3"
+    }
+}

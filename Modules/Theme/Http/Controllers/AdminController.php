@@ -19,7 +19,7 @@ class AdminController extends Controller
 		$this->theme = Option::where('name','theme_current')->first()->value;
 	}
 	public function fourofour(){
-		return "1111";
+		// return "1111";	
 		return view('theme::admin.404');
 	}
 	public function analytics(){
@@ -63,9 +63,13 @@ class AdminController extends Controller
 		$d->close();
 
 		$themeOptions = $themeSettings[$this->theme]->options;
+		// return $themeOptions;
 		foreach ($themeOptions as $key => $value) {
-			$value->value = Option::where('name','themes_'.$this->theme.'_'.$value->name)->first()->value;
+			// echo($value);
+			$value->value="dd";
+			// $value->value = Option::where('name','themes_'.$this->theme.'_'.$value->name)->first()->value;
 		}
+		// exit();
 		$optionResults = Option::Where('name', 'like', '%' . 'themes_'.$this->theme . '%')->get();
 		foreach ($optionResults as $value) {
 			// $value->name = "ss";

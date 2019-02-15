@@ -11,7 +11,7 @@
                 <button class="btn btn-outline">Contact Us</button>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <img src="/main/img/ph/yolk.png" alt="" class="img-fluid">
+                <img src="{{route('theme.image',['name'=>'yolk.png'])}}" alt="" class="img-fluid">
 
             </div>
         </div>
@@ -36,7 +36,7 @@
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'draby.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>PM Dr.Abiy Ahemed</p>
@@ -49,7 +49,7 @@
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="/main/img/ph/products/gc.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'gc.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>GC App 2018</p>
@@ -62,7 +62,7 @@
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="/main/img/ph/products/etfun.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'etfun.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>Ethiofunder.com</p>
@@ -75,7 +75,7 @@
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="/main/img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'draby.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>PM Dr.Abiy Ahemed</p>

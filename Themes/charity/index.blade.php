@@ -172,7 +172,7 @@
                         </div><!-- .entry-content -->
 
                         <div class="entry-footer mt-5">
-                            <a href="{{route('about_us')}}" class="btn gradient-bg mr-2">ተጨማሪ ያንብቡ</a>
+                            <a href="@{{route('about_us')}}" class="btn gradient-bg mr-2">ተጨማሪ ያንብቡ</a>
                         </div><!-- .entry-footer -->
                     </div><!-- .welcome-content -->
                 </div><!-- .col -->

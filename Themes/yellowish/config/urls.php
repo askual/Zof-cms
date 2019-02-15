@@ -12,48 +12,57 @@ Route::get('/', function(){
 })->name('theme.page.index');
 
 
-
 Route::get('/about', function(){
-    return view('yellowish.static.about');
+    return view('yellowish.pages.about');
 })->name('theme.page.about');
 
 
 Route::get('/contact', function(){
-    return view('yellowish.static.contact');
+    return view('yellowish.pages.contact');
 })->name('theme.page.contact');
 
 
 Route::get('/services', function(){
-    return view('yellowish.static.services');
+    return view('yellowish.pages.services');
 })->name('theme.page.services');
 
 
 Route::get('/products', function(){
-    return view('yellowish.static.products');
+    return view('yellowish.pages.products');
 })->name('theme.page.products');
 
 
 Route::get('/press', function(){
-    return view('yellowish.static.press');
+    return view('yellowish.pages.press');
 })->name('theme.page.press');
 
 
 Route::get('/faq', function(){
-    return view('yellowish.static.faq');
+    return view('yellowish.pages.faq');
 })->name('theme.page.faq');
 
 
 Route::get('/privacy', function(){
-    return view('yellowish.static.privacy');
+    return view('yellowish.pages.privacy');
 })->name('theme.page.privacy');
 
 
 Route::get('/terms', function(){
-    return view('yellowish.static.terms');
+    return view('yellowish.pages.terms');
 })->name('theme.page.terms');
 
 
 Route::get('/opensource', function(){
-    return view('yellowish.static.opensource');
+    return view('yellowish.pages.opensource');
 })->name('theme.page.opensource');
+
+
+Route::get('/img/{name}', function($name){
+    // $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
+    // return file_get_contents(base_path('Themes/yellowish/img/'.$name));
+    return response(file_get_contents(base_path('Themes/yellowish/img/'.$name)), 200, [
+        // 'Content-Type' => 'application/xml'
+        'Content-Type' => 'image/png'
+    ]);
+})->name('theme.image');
 

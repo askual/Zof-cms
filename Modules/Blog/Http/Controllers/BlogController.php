@@ -17,7 +17,7 @@ class BlogController extends Controller
     }
     public function index(){
 		$posts = Post::orderBy('id','desc')->paginate(10);        
-    	return view( $this->theme.'.module.blog',['posts'=>$posts]);
+    	return view( $this->theme.'.module.blog.blog',['posts'=>$posts]);
     }
     public function single_post($slug){
         $post = Post::where('slug',$slug)->first();
@@ -30,6 +30,6 @@ class BlogController extends Controller
         SEO::opengraph()->addProperty('title', $post->title);
         SEO::opengraph()->addProperty('description', $post->excerpt);
         SEO::opengraph()->addProperty('image', url($post->picture));
-        return view( $this->theme.'.module.blog_single',['post'=>$post] );
+        return view( $this->theme.'.module.blog.blog_single',['post'=>$post] );
     }
 }

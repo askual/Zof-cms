@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row py-4">
                 <div class="col-sm-12 col-md-6 col-lg-6">
-                    <h5 class="text-white display-4">Development, design and implementation</h5>
+                    <h5 class="text-white display-4">Development, Design and Implementation</h5>
                     <!-- <p class="text-white intro-lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quos voluptatibus placeat harum cum laudantium ipsa reiciendis minus nostrum nobis, dolorum nesciunt nisi. Ex reiciendis dignissimos id voluptatum eum incidunt!</p>
                     <button class="btn btn-outline">Contact Us</button> -->
                 </div>

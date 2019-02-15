@@ -24,4 +24,11 @@ class PageController extends Controller
             'Content-Type' => 'application/xml'
         ]);
     }
+    public function fourofour(){
+        return view($this->theme.'.pages.404');
+    }
+    public function fiveoo(){
+        return view($this->theme.'.pages.500');
+    }
+    
 }

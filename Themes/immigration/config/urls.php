@@ -25,44 +25,9 @@ Route::get('/resources', function(){
 })->name('theme.page.resources');
 
 
-Route::get('/contact', function(){
-    return view('yellowish.pages.contact');
-})->name('theme.page.contact');
-
-
-Route::get('/services', function(){
-    return view('yellowish.pages.services');
-})->name('theme.page.services');
-
-
-Route::get('/products', function(){
-    return view('yellowish.pages.products');
-})->name('theme.page.products');
-
-
-Route::get('/press', function(){
-    return view('yellowish.pages.press');
-})->name('theme.page.press');
-
-
-Route::get('/faq', function(){
-    return view('yellowish.pages.faq');
-})->name('theme.page.faq');
-
-
-Route::get('/privacy', function(){
-    return view('yellowish.pages.privacy');
-})->name('theme.page.privacy');
-
-
-Route::get('/terms', function(){
-    return view('yellowish.pages.terms');
-})->name('theme.page.terms');
-
-
-Route::get('/opensource', function(){
-    return view('yellowish.pages.opensource');
-})->name('theme.page.opensource');
+Route::get('/register', function(){
+    return view('immigration.pages.register');
+})->name('theme.page.register');
 
 
 Route::get('/img/{name}', function($name){
@@ -88,3 +53,11 @@ Route::get('/theme/js/{name}', function($name){
     ]);
 })->name('theme.js');
 // })->name('theme.js')->where('name', '[*]+');
+
+Route::get('/theme/file/{name}', function($name){
+    // return response(file_get_contents(base_path('Themes/immigration/assets/file/'.$name)), 
+    $headers = array(
+        'Content-Type: application/octet-stream',
+      );
+      return response()->download(base_path('Themes/immigration/assets/file/'.$name), $name, $headers);
+})->name('theme.download');

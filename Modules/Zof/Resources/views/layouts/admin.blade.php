@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>
-  Zof-Admin: @yield('title')
+  Zoff-Admin: @yield('title')
 </title>
   <link rel="stylesheet" href="{{ url('adminlte/bootstrap/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('bower_components/font-awesome/css/font-awesome.min.css') }}">
@@ -21,7 +21,7 @@
   <header class="main-header">
     <a href="{{route('admin.index')}}" class="logo">
       <span class="logo-mini"><b>Z</b>C</span>
-      <span class="logo-lg"><b>Zof</b><small>Cms</small></span>
+      <span class="logo-lg"><b>Zoff</b><small>Cms</small></span>
     </a>
     <nav class="navbar navbar-static-top">
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">

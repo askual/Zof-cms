@@ -16,7 +16,7 @@ class ModuleHelper
         $ff = @file_get_contents($zjson->base_link.'/module/'.$modulename);
         $obj = json_decode($ff);
         if(!isset($obj->version)){
-            return "E-".$zjson->base_link.'/zof/module/'.$modulename;
+            return "E-".$zjson->base_link.'/module/'.$modulename;
         }
         return $obj->version; 
     }

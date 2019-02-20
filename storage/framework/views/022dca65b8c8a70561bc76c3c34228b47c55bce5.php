@@ -20,8 +20,10 @@
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="<?php echo e(route('theme.css',['name'=>'linearicons.css'])); ?>">
-			<link rel="stylesheet" href="<?php echo e(route('theme.css',['name'=>'font-awesome.min.css'])); ?>">
+			<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+			
+			
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 			<link rel="stylesheet" href="<?php echo e(route('theme.css',['name'=>'bootstrap.css'])); ?>">
 			<link rel="stylesheet" href="<?php echo e(route('theme.css',['name'=>'magnific-popup.css'])); ?>">
 			<link rel="stylesheet" href="<?php echo e(route('theme.css',['name'=>'nice-select.css'])); ?>">
@@ -60,27 +62,27 @@
 							<?php if(url()->current() == route('theme.page.index')): ?>	<li class="menu-active">
 							<?php else: ?>	<li>
 							<?php endif; ?>
-							<a href="<?php echo e(route('theme.page.index')); ?>">Home </a></li>
+							<a href="<?php echo e(route('theme.page.index')); ?>">መነሻ ገጽ / Home </a></li>
 
 							<?php if(url()->current() == route('theme.page.about')): ?>	<li class="menu-active">
 							<?php else: ?>	<li>
 							<?php endif; ?>
-							<a href="<?php echo e(route('theme.page.about')); ?>">About </a></li>
+							<a href="<?php echo e(route('theme.page.about')); ?>">ስለ እኛ / About </a></li>
 
 							<?php if(url()->current() == route('theme.page.gallery')): ?>	<li class="menu-active">
 							<?php else: ?>	<li>
 							<?php endif; ?>
-							<a href="<?php echo e(route('theme.page.gallery')); ?>">Gallery </a></li>
+							<a href="<?php echo e(route('theme.page.gallery')); ?>">ምስሎች / Gallery </a></li>
 
 							<?php if(url()->current() == route('blog')): ?>	<li class="menu-active">
 							<?php else: ?>	<li>
 							<?php endif; ?>
-							<a href="<?php echo e(route('blog')); ?>">Blog </a></li>
+							<a href="<?php echo e(route('blog')); ?>"> ልጥፎች / Blog </a></li>
 
 							<?php if(url()->current() == route('theme.page.resources')): ?>	<li class="menu-active">
 							<?php else: ?>	<li>
 							<?php endif; ?>
-							<a href="<?php echo e(route('theme.page.resources')); ?>">Resources </a></li>
+							<a href="<?php echo e(route('theme.page.resources')); ?>"> አስፈላጊ ነገሮች / Resources </a></li>
 							
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -96,17 +98,17 @@
 					<div class="row">
 						<div class="col-lg-3  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>About Us</h4>
+								<h4>ስለ እኛ</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+									አለን ኢትዮጲያ በወጣቶች የተመሰረተ የበጎ እድራጎት ድርጅት ሲሆን የሰው ልጆች የለውጥ ማእከል ለመሆን ይተጋል።
 								</p>
 							</div>
 						</div>
 						<div class="col-lg-4  col-md-6 col-sm-6">
 							<div class="single-footer-widget">
-								<h4>Contact Us</h4>
+								<h4>ያግኙን</h4>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.
+									አለን ኢትዮጲያ በ ሀዋሳ፣ ቡሌሆራና ወላይታ ሶዶ የሚንቀሳቀስ ሲሆን ከዚህ በታች በተዘረዘሩ እድራሻዎች ቢደውሉ እለን እንሎታለን።
 								</p>
 								<p class="number">
 									012-6532-568-9746 <br>

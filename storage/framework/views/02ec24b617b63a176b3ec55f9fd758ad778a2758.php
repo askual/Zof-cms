@@ -1,32 +1,9 @@
-<?php $__env->startSection('intro'); ?>
-<div class="container">
-    <div class="row py-4">
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <h5 class="text-white display-4">Page not found</h5>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
-            <!-- <img src="img/ph1.svg" alt="" class="img-fluid"> -->
-        </div>
-    </div>
-</div>
-<?php $__env->stopSection(); ?>
-
 <?php $__env->startSection('content'); ?>
 
-<div class="feat pt-4 mt-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-8">
-                    <h5 class="display-5 mb-2">Team <span class="fan-title pb-1">Askual</span></h5>
-                    <p class="text-grey">The brains behind our company</p>
-                </div>
-                <div class="col-sm-6 col-md-4 text-right">
-                    <i class="fa fa-th-large fa-4x" style="color:#F9DF92;"></i>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- SeeNa AD - Ad Display Code -->
+<div id="adm-container-987"></div><script data-cfasync="false" async type="text/javascript" src="//seena-ad.com/display/items.php?987&179&250&250&1"></script>
+<!-- SeeNa AD - Ad Display Code --> 
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('yellowish.layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('immigration.layout', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>

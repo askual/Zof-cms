@@ -6,6 +6,7 @@ return [
     'admin-routes' => [
     	(object)['r'=>url('/admin/alensys/members'), 'n' => 'Members' ],
     	(object)['r'=>url('/admin/alensys/payment'), 'n' => 'Payment' ],
+    	(object)['r'=>url('/admin/alensys/setting'), 'n' => 'Setting' ],
     ],
 ];
 

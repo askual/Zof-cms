@@ -8,14 +8,14 @@
     <div class="container">				
         <div class="row fullscreen d-flex align-items-center justify-content-start">
             <div class="banner-content col-lg-9">
-                <h6>Process Visa without within hours</h6>
+                <h6>በተግባር ማህበረሰብን ማገልገል</h6>
                 <h1 class="text-white">
-                    Immigrations &  <br>
-                    Visa Consultation
+                    ሀገራችንን <br>
+                    አለን እንበል
                 </h1>
-                <a href="#" class="genric-btn circle">Book Consultancy</a>
+                <a href="{{route('theme.page.about')}}" class="genric-btn circle">በደንብ እንተዋወቅ</a>
             </div>
-        <img class="header-img img-fluid align-self-end d-flex" src="{{route('theme.image',['name'=>'header-img.png'])}}" alt="">			
+        <img class="header-img img-fluid align-self-end d-flex" src="{{route('theme.image',['name'=>'alen1.jpg'])}}" alt="">			
         </div>
     </div>
 </section>
@@ -28,17 +28,17 @@
             <div class="row justify-content-center align-items-center">
                 <div class="col-lg-4 call-left no-padding">
                     <p>
-                        Start <span>planning</span> your <br>
-                        New <span>Dream</span>
+                        የበጎ <span>ለውጥ</span> አካል <br>
+                        ለመሆን <span>ይቀላቀሉን</span>
                     </p>
                 </div>
                 <div class="col-lg-5 call-middle">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        የአለን ኢትዮጲያ አካል ለመሆን የሚጠበቅባችሁ የሚከተለውን ፎርም መሙላት ብቻ ነው።
                     </p>
                 </div>
                 <div class="col-lg-3 call-right justify-content-end d-flex">
-                    <a href="#" class="call-btn">Request Free Consultancy</a>
+                    <a href="{{route('theme.page.register')}}" class="call-btn">ይመዝገቡ</a>
                 </div>
             </div>
         </div>
@@ -51,9 +51,9 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-7 pb-40 header-text text-center">
-                <h1 class="pb-10">Requirements to be Immigrants</h1>
+                <h1 class="pb-10">ከተግባሮቻችን መካከል</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua.
+                    ድርጅታችን የተለያዩ ፕሮጀክቶችን ነድፎ ይንቀሳቀሳል
                 </p>
             </div>
         </div>					
@@ -63,50 +63,11 @@
                     <div class="thumb">
                         <img src="img/s1.jpg" alt="">
                     </div>
-                    <a class="tag">United States</a>
-                    <a href="country-list.html"><h4>Addiction When Gambling
-                    Becomes A Problem</h4></a>
+                    <a class="tag">ቡሌሆራ</a>
+                    <a class="tag">ሀዋሳ</a>
+                    <a href="country-list.html"><h4>የመጽሀፍት ማሰባሰብ</h4></a>
                     <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="img/s2.jpg" alt="">
-                    </div>
-                    <a class="tag">Canada</a>
-                    <a href="country-list.html"><h4>Addiction When Gambling
-                    Becomes A Problem</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="img/s3.jpg" alt="">
-                    </div>
-                    <a class="tag">Germany</a>
-                    <a href="country-list.html"><h4>Addiction When Gambling
-                    Becomes A Problem</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="single-service">
-                    <div class="thumb">
-                        <img src="img/s4.jpg" alt="">
-                    </div>
-                    <a class="tag">Australia</a>
-                    <a href="country-list.html"><h4>Addiction When Gambling
-                    Becomes A Problem</h4></a>
-                    <p>
-                        inappropriate behavior ipsum dolor sit amet, consectetur.
+                        መጽሀፍትን በማሰባሰብ ቤተመጽሀፍት እናበረክታለን።
                     </p>
                 </div>
             </div>																		
@@ -116,7 +77,7 @@
 <!-- End service Area -->
 
 
-<!-- Start booking Area -->
+{{-- <!-- Start booking Area -->
 <section class="booking-area section-gap relative" id="consultancy">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -156,9 +117,9 @@
         </div>
     </div>	
 </section>
-<!-- End booking Area -->
+<!-- End booking Area --> --}}
 
-
+{{-- 
 <!-- Start feature Area -->
 <section class="feature-area section-gap" id="service">
     <div class="container">
@@ -222,10 +183,10 @@
         </div>
     </div>	
 </section>
-<!-- End feature Area -->	
+<!-- End feature Area -->	 --}}
 
 <!-- Start review Area -->
-<section class="review-area section-gap" id="review">
+{{-- <section class="review-area section-gap" id="review">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-9 pb-40 header-text text-center">
@@ -305,9 +266,9 @@
         </div>
     </div>	
 </section>
-<!-- End review Area -->
+<!-- End review Area --> --}}
 
-
+{{-- 
 <!-- Start brand Area -->
 <section class="brand-area pt-100">
     <div class="container">
@@ -388,7 +349,7 @@
         </div>
     </div>	
 </section>
-<!-- End callto Area -->
+<!-- End callto Area --> --}}
 @endsection
 
 

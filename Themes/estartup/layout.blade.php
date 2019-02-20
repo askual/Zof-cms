@@ -26,6 +26,9 @@
 </head>
 
 <body>
+hello gdudh  
+ሄሎj
+በቀለ ያለውለ
 
   <header id="header" class="header header-hide">
     <div class="container">
@@ -37,7 +40,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           @if(Route::currentRouteName()=="index")<li class="menu-active">@else<li>@endif<a href="{{route('index')}}">Home</a></li>
-          @if(url()->current()==route('blog'))<li class="menu-active">@else<li>@endif<a href="{{route('blog')}}">blog </a></li>              
+            <li class="menu-active">@else<li>@endif<a href="{{route('blog')}}">blog </a></li>              
           @foreach ([['contact','Contact us'],['gallery','Gallery'],['members','Members'],['resource','Resources']] as $slug)
           @if(url()->current()==route('theme.static_page',['slug'=>$slug[0]]))<li class="menu-active">@else<li>@endif<a href="{{route('theme.static_page',['slug'=>$slug[0]])}}">{{$slug[1]}} </a></li>              
           @endforeach

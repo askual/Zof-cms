@@ -84,7 +84,7 @@
 
                 </div>
                 <div class="col-lg-4 sidebar">
-                    <div class="single-widget search-widget">
+                    {{-- <div class="single-widget search-widget">
                         <form class="example" action="#" style="margin:auto;max-width:300px">
                           <input type="text" placeholder="Search Posts" name="search2">
                           <button type="submit"><i class="fa fa-search"></i></button>
@@ -216,7 +216,7 @@
                              <li><a href="#">Food</a></li>
                              <li><a href="#">Technology</a></li>
                          </ul>
-                    </div>				
+                    </div>				 --}}
 
                 </div>
             </div>

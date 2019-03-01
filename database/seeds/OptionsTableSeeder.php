@@ -14,8 +14,8 @@ class OptionsTableSeeder extends Seeder
         $options = [
             ['name' => 'site_name', 'value'=> 'Alen Ethiopia'],
             ['name' => 'site_description', 'value'=> 'Alen Ethiopia is a non-governmental institution'],
-            ['name' => 'posts_per_page', 'value'=> '10'],
-            ['name' => 'theme_current', 'value'=> '2'],
+            // ['name' => 'posts_per_page', 'value'=> '10'],
+            ['name' => 'theme_current', 'value'=> 'yellowish'],
             // ['name' => '', 'value'=> ''],
             // ['name' => '', 'value'=> ''],
             // ['name' => '', 'value'=> ''],

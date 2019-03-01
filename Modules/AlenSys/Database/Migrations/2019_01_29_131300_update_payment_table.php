@@ -26,7 +26,7 @@ class UpdatePaymentTable extends Migration
      */
     public function down()
     {
-        Schema::table('', function (Blueprint $table) {
+        Schema::table('alensys-payments', function (Blueprint $table) {
 
         });
     }

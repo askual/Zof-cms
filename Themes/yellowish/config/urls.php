@@ -57,12 +57,46 @@ Route::get('/opensource', function(){
 })->name('theme.page.opensource');
 
 
+// Route::get('/img/{name}', function($name){
+//     // $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
+//     // return file_get_contents(base_path('Themes/yellowish/img/'.$name));
+//     return response(file_get_contents(base_path('Themes/yellowish/img/'.$name)), 200, [
+//         // 'Content-Type' => 'application/xml'
+//         'Content-Type' => 'image/png'
+//     ]);
+// })->name('theme.image');
+
+// GENERAL
+
 Route::get('/img/{name}', function($name){
     // $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
     // return file_get_contents(base_path('Themes/yellowish/img/'.$name));
-    return response(file_get_contents(base_path('Themes/yellowish/img/'.$name)), 200, [
+    return response(file_get_contents(base_path('Themes/yellowish/assets/img/'.$name)), 200, [
         // 'Content-Type' => 'application/xml'
         'Content-Type' => 'image/png'
     ]);
 })->name('theme.image');
+// 
+Route::get('/theme/css/{name}', function($name){
+    return response(file_get_contents(base_path('Themes/yellowish/assets/css/'.$name)), 200, [
+        // 'Content-Type' => 'application/xml'
+        'Content-Type' => 'text/css'
+    ]);
+})->name('theme.css');
+Route::get('/theme/js/{name}', function($name){
+    // return $name;
+    return response(file_get_contents(base_path('Themes/yellowish/assets/js/'.$name)), 200, [
+        // 'Content-Type' => 'application/xml'
+        'Content-Type' => 'application/javascript'
+    ]);
+})->name('theme.js');
+// })->name('theme.js')->where('name', '[*]+');
+
+Route::get('/theme/file/{name}', function($name){
+    // return response(file_get_contents(base_path('Themes/yellowish/assets/file/'.$name)), 
+    $headers = array(
+        'Content-Type: application/octet-stream',
+      );
+      return response()->download(base_path('Themes/yellowish/assets/file/'.$name), $name, $headers);
+})->name('theme.download');
 

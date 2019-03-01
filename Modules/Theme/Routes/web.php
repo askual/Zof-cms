@@ -5,6 +5,7 @@ use Modules\Zof\Entities\Option;
 $o = Option::where('name','theme_current')->first()->value;
 include_once base_path('Themes/'.$o.'/config/urls.php');
 
+
 Route::get('/404', 'PageController@fourofour')->name('theme.page.404');
 Route::get('/500', 'PageController@fiveoo')->name('theme.page.500');
 

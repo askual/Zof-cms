@@ -30,6 +30,16 @@ Route::get('/register', function(){
 })->name('theme.page.register');
 
 
+
+
+
+
+
+
+
+
+// GENERAL
+
 Route::get('/img/{name}', function($name){
     // $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
     // return file_get_contents(base_path('Themes/yellowish/img/'.$name));
@@ -61,3 +71,4 @@ Route::get('/theme/file/{name}', function($name){
       );
       return response()->download(base_path('Themes/immigration/assets/file/'.$name), $name, $headers);
 })->name('theme.download');
+

@@ -15,6 +15,7 @@ class ThemeHelper {
                     return redirect()->route('admin.theme.page.404');
                 }
             }
+            
             return redirect()->route('theme.page.404');
         }elseif ($code == 500) {
             return redirect()->route('theme.page.500');

@@ -24,20 +24,26 @@
 
             <div class=" prod-card row  py-4">
                 <div class="col-sm-12 col-md-8 col-lg-8">
-                <img src="img/ph1.svg" alt="">
+                <!-- <img src="img/ph1.svg" alt=""> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fjn_K5hP5y0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <h3>Askual on Jtv</h3>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, expedita labore. Mollitia adipisci tempora rem commodi eos unde!</h5>
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, expedita labore. Mollitia adipisci tempora rem commodi eos unde!
+                    </h5>
                 </div>
             </div>
             <div class=" prod-card row  py-4">
                 <div class="col-sm-12 col-md-8 col-lg-8">
-                <img src="img/ph1.svg" alt="" >
+                <!-- <img src="img/ph1.svg" alt="" > -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/q6Jx21HD7GA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <h3>Askual on Etv</h3>
-                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, expedita labore. Mollitia adipisci tempora rem commodi eos unde!</h5>
+                    <h5>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, expedita labore. Mollitia adipisci tempora rem commodi eos unde!
+                    </h5>
                 </div>
             </div>
 

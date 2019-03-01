@@ -6,13 +6,12 @@
 <div class="container">
         <div class="row py-4">
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <h5 class="text-white display-4">Lorem ipsum, dolor sit amet consectetur adipisicing.</h5>
-                <p class="text-white intro-lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quos voluptatibus placeat harum cum laudantium ipsa reiciendis minus nostrum nobis, dolorum nesciunt nisi. Ex reiciendis dignissimos id voluptatum eum incidunt!</p>
+                <h5 class="text-white display-4">Disrupting, for better!</h5>
+                <p class="text-white intro-lead">We are a team of software developers who focus on developing products which last decade and bla blah!</p>
                 <button class="btn btn-outline">Contact Us</button>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6">
                 <img src="{{route('theme.image',['name'=>'yolk.png'])}}" alt="" class="img-fluid">
-
             </div>
         </div>
     </div>

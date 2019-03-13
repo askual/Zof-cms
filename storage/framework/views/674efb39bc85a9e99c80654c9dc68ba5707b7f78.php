@@ -1,15 +1,12 @@
 <?php $__env->startSection('intro'); ?>
 <div class="container">
             <div class="row py-4">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <h5 class="text-white display-4">Announcements, Tips and insignts</h5>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h5 class="text-white display-4">Announcements, Tips and Insights</h5>
                     <!-- <p class="text-white intro-lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quos voluptatibus placeat harum cum laudantium ipsa reiciendis minus nostrum nobis, dolorum nesciunt nisi. Ex reiciendis dignissimos id voluptatum eum incidunt!</p>
                     <button class="btn btn-outline">Contact Us</button> -->
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <!-- <h5 class="text-white display-5"></h5> -->
-                    <img src="/main/img/ph1.svg" height="140px" width="550" alt="" class="img-fluid">
-                </div>
+                
             </div>
         </div>
 

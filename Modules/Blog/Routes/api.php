@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/blog', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('blog')->group(function() {
+    Route::get('/all', 'BlogController@api_all')->name('api.blog.all');
+});
+

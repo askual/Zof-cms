@@ -67,32 +67,34 @@
                             </a>
                         </li>
 
-                        <?php if(url()->current() == route('theme.page.products')): ?>
+                        <?php if(url()->current() == route('theme.page.yecampus')): ?>
                         <li class="nav-item active">
                         <?php else: ?>
                         <li class="nav-item">
                         <?php endif; ?>
-                            <a class="nav-link" href="<?php echo e(route('theme.page.products')); ?>">Products 
+                            <a class="nav-link" href="<?php echo e(route('theme.page.yecampus')); ?>">YeCampus
+                            </a>
+                        </li>
+                        <?php if(url()->current() == route('theme.page.yeculture')): ?>
+                        <li class="nav-item active">
+                        <?php else: ?>
+                        <li class="nav-item">
+                        <?php endif; ?>
+                            <a class="nav-link" href="<?php echo e(route('theme.page.yeculture')); ?>">YeCulture
+                            </a>
+                        </li>
+                        <?php if(url()->current() == route('theme.page.zoffsites')): ?>
+                        <li class="nav-item active">
+                        <?php else: ?>
+                        <li class="nav-item">
+                        <?php endif; ?>
+                            <a class="nav-link" href="<?php echo e(route('theme.page.zoffsites')); ?>">Zoff sites
                             </a>
                         </li>
 
-                        <?php if(url()->current() == route('theme.page.services')): ?>
-                        <li class="nav-item active">
-                        <?php else: ?>
-                        <li class="nav-item">
-                        <?php endif; ?>
-                            <a class="nav-link" href="<?php echo e(route('theme.page.services')); ?>">Services 
-                            </a>
-                        </li>
+                        
 
-                        <?php if(url()->current() == route('theme.page.press')): ?>
-                        <li class="nav-item active">
-                        <?php else: ?>
-                        <li class="nav-item">
-                        <?php endif; ?>
-                            <a class="nav-link" href="<?php echo e(route('theme.page.press')); ?>">Press 
-                            </a>
-                        </li>
+                        
 
                         <?php if(url()->current() == route('theme.page.about')): ?>
                         <li class="nav-item active">
@@ -103,16 +105,9 @@
                             </a>
                         </li>
 
-                        <?php if(url()->current() == route('theme.page.contact')): ?>
-                        <li class="nav-item active">
-                        <?php else: ?>
-                        <li class="nav-item">
-                        <?php endif; ?>
-                            <a class="nav-link" href="<?php echo e(route('theme.page.contact')); ?>">Contact 
-                            </a>
-                        </li>
+                        
 
-                        <a href="#" class="btn btn-outline">Client Login</a>
+                    <a href="<?php echo e(route('client.login')); ?>" class="btn btn-outline">Client Login</a>
                         
                     </ul>
                 </div>

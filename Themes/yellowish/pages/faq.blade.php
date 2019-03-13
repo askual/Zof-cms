@@ -20,14 +20,12 @@
 <div class="feat pt-4 mt-2">
     <div class="container">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <!-- <div class="card product-card"> -->
-                    <h5 class="text-center" >Here lies the question</h5>
-            <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</p>
-                    <h5 class="text-center" >Here lies the question</h5>
-            <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</p>
-                    <h5 class="text-center" >Here lies the question</h5>
-            <p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Proin eget tortor risus. Donec sollicitudin molestie malesuada.</p>
-                <!-- </div> -->
+
+                <div class="container">
+                    <div class="col-sm-12"><h5 class="text-center" >Are you PM Abiy Ahmed?</h5></div>
+                    <div class="col-sm-4"> <img class="img-fluid" src="dd.dd" ></div>
+                    <div class="col-sm-8"> <p>  We are not Abiy Ahmed. It appears that we were the first one to build a dedicated app for the PM and it went viral. Having more than 20,000 downloads it not bad at all for an app built literally within a day. But we built it out of the blue. We are not affiliated with the PM, PMO nor any governmental body for a matter of the fact.</p></div>
+                </div>
             </div>
         </div>
     </div>

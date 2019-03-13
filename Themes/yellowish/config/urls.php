@@ -57,6 +57,30 @@ Route::get('/opensource', function(){
 })->name('theme.page.opensource');
 
 
+
+
+
+Route::get('/projects/yecampus', function(){
+    return view('yellowish.pages.yecampus');
+})->name('theme.page.yecampus');
+
+Route::get('/projects/yeculture', function(){
+    return view('yellowish.pages.yeculture');
+})->name('theme.page.yeculture');
+
+Route::get('/projects/zoffsites', function(){
+    return view('yellowish.pages.zoffsites');
+})->name('theme.page.zoffsites');
+
+Route::get('/projects/gcsuite', function(){
+    return view('yellowish.pages.gcsuite');
+})->name('theme.page.gcsuite');
+
+
+
+Route::get('/sssss/ssss/{id}',function($id){
+    return "sss".$id;
+})->name('theme.page.index2');
 // Route::get('/img/{name}', function($name){
 //     // $theme = DB::table('zof-options')->where('name','theme_current')->get()[0]->value;
 //     // return file_get_contents(base_path('Themes/yellowish/img/'.$name));

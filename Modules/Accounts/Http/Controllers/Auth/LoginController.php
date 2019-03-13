@@ -47,9 +47,12 @@ class LoginController extends Controller
         return view('accounts::admin.login');
     }
     public function admin_login_submit(Request $request){
+        // return "ddd";
         if(Auth::guard('web')->attempt(['isadmin'=>1,'email'=> $request->email , 'password' => $request->password], $request->remember)){
+            // return "ddddd";
             return redirect()->intended(route('admin.index'));
         }
+        // return "oooo";
         return redirect()->back()->withInput($request->only('email'));
     }
     public function logout(Request $request){

@@ -73,15 +73,32 @@
                             </a>
                         </li>
 
-                        @if(url()->current() == route('theme.page.products'))
+                        @if(url()->current() == route('theme.page.yecampus'))
                         <li class="nav-item active">
                         @else
                         <li class="nav-item">
                         @endif
-                            <a class="nav-link" href="{{route('theme.page.products')}}">Products 
+                            <a class="nav-link" href="{{route('theme.page.yecampus')}}">YeCampus
+                            </a>
+                        </li>
+                        @if(url()->current() == route('theme.page.yeculture'))
+                        <li class="nav-item active">
+                        @else
+                        <li class="nav-item">
+                        @endif
+                            <a class="nav-link" href="{{route('theme.page.yeculture')}}">YeCulture
+                            </a>
+                        </li>
+                        @if(url()->current() == route('theme.page.zoffsites'))
+                        <li class="nav-item active">
+                        @else
+                        <li class="nav-item">
+                        @endif
+                            <a class="nav-link" href="{{route('theme.page.zoffsites')}}">Zoff sites
                             </a>
                         </li>
 
+                        {{--
                         @if(url()->current() == route('theme.page.services'))
                         <li class="nav-item active">
                         @else
@@ -90,7 +107,6 @@
                             <a class="nav-link" href="{{route('theme.page.services')}}">Services 
                             </a>
                         </li>
-
                         @if(url()->current() == route('theme.page.press'))
                         <li class="nav-item active">
                         @else
@@ -99,6 +115,9 @@
                             <a class="nav-link" href="{{route('theme.page.press')}}">Press 
                             </a>
                         </li>
+                        --}}
+
+                        
 
                         @if(url()->current() == route('theme.page.about'))
                         <li class="nav-item active">
@@ -109,6 +128,7 @@
                             </a>
                         </li>
 
+                        {{--
                         @if(url()->current() == route('theme.page.contact'))
                         <li class="nav-item active">
                         @else
@@ -117,8 +137,9 @@
                             <a class="nav-link" href="{{route('theme.page.contact')}}">Contact 
                             </a>
                         </li>
+                        --}}
 
-                        <a href="#" class="btn btn-outline">Client Login</a>
+                    <a href="{{route('client.login')}}" class="btn btn-outline">Client Login</a>
                         
                     </ul>
                 </div>

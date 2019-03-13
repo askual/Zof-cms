@@ -12,10 +12,13 @@ class AdminController extends Controller
 {
     private $theme = "";
     public function __construct(){
-		$this->middleware('isAdmin');
-		$this->theme = Option::where('name','theme_current')->first()->value;
+			$this->middleware('isAdmin');
+			$this->theme = Option::where('name','theme_current')->first()->value;
     }
     public function create(Request $request){
+			if($request['filepath'] == null){
+				$request['filepath'] = "/photos/default.jpg";
+			}
     	Post::create([
     		'body' => $request['tm'],
     		'title' => $request['title'],
@@ -28,6 +31,9 @@ class AdminController extends Controller
 	}
 
 	public function edit_post_submit(Request $request){
+		if($request['filepath'] == null){
+			$request['filepath'] = "/photos/default.jpg";
+		}
 		$post = Post::find($request['post_id']);
 		$post->title = $request['title'];
 		$post->picture = $request['filepath'];

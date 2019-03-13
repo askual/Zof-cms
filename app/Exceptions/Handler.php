@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Auth\AuthenticationException;
 use Modules\Theme\Helpers\ThemeHelper;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -52,5 +53,25 @@ class Handler extends ExceptionHandler
         }else{
             return parent::render($request, $exception);
         }
+    }
+
+
+    protected function unauthenticated($request, AuthenticationException $exception){
+        $guard = array_get($exception->guards(), 0);
+        switch ($guard) {
+            case 'admin':
+                $login = 'login.admin';
+                break;
+                
+            case 'clients':
+                $login = 'client.login';
+                break;
+
+            case 'user':
+                $login = 'login';
+                break;
+        }
+
+        return redirect()->guest(route($login));
     }
 }

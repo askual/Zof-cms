@@ -80,6 +80,11 @@ p {
     width: 100px;
     height: 100px;
 }
+
+.gc-app-icons {
+    width: 150px;
+    height: 200px;
+}
 .blog-pics {
     width: 300px;
     height: 100px;
@@ -139,7 +144,24 @@ footer ul li a.active {
     border-color: #fff;
     background-color: transparent;
 }
+.btn-outline2 {
+    color: #ffffff;
+    border: 1px solid;
+    border-color: rgb(161, 8, 8);
+    background-color: rgb(26, 21, 21);
+}
+.dd{
+    background-color: #afaba1e7;
+    color : #222326;
+    width: 100%;
+}
 
+
+
+.btn-outline2:hover {
+    background-color: #ffffff;
+    color: rgb(26, 21, 21);
+}
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,

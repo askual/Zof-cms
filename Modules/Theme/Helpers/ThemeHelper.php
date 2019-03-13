@@ -15,7 +15,8 @@ class ThemeHelper {
                     return redirect()->route('admin.theme.page.404');
                 }
             }
-            
+            // return redirect()->route('theme.page.index2',['id'=>'='.url()->current()]);
+            // return redirect()->route('hehe',['id'=>$ee[1] ]);
             return redirect()->route('theme.page.404');
         }elseif ($code == 500) {
             return redirect()->route('theme.page.500');

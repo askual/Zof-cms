@@ -35,7 +35,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'kib.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>Kibru Demeke</p>
@@ -46,7 +46,7 @@
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'abe.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>Abenezer Yohannes</p>
@@ -57,58 +57,41 @@
                 <div class="col-sm-12 col-md-4 col-lg-4">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'yiw.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>Yiwosin Dagne</p>
-                            <small class="text-grey">Computer Science and Engineering student at Adama Science and Technology university</small>
+                            <small class="text-grey">Information Systems student at Hawassa University</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
+                </div>
+                <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'tad.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
                             <p>Tadiwos Alemayehu</p>
-                            <small class="text-grey">Computer Science and Engineering student at Adama Science and Technology university</small>
+                            <small class="text-grey">Computer Science and Technology student at Adama Science and Technology university</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
                     <div class="card product-card">
                         <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
+                            <img src="{{route('theme.image',['name'=>'yet.png'])}}" alt="" class="product-icons">
                         </div>
                         <div class="card-body text-center">
-                            <p>Yetsadkan Gebeyehu</p>
-                            <small class="text-grey">Computer Science and Engineering student at Adama Science and Technology university</small>
+                            <p>Yetsadkan Meshesha</p>
+                            <small class="text-grey">Computer Science  student at HilCoe</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card product-card">
-                        <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
-                        </div>
-                        <div class="card-body text-center">
-                            <p>Bushra Mustefa</p>
-                            <small class="text-grey">Computer Science and Engineering student at Adama Science and Technology university</small>
-                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-3 col-lg-3">
-                    <div class="card product-card">
-                        <div class="text-center py-4">
-                            <img src="img/ph/products/draby.png" alt="" class="product-icons">
-                        </div>
-                        <div class="card-body text-center">
-                            <p>Yohannes Maru</p>
-                            <small class="text-grey">Computer Science and Engineering student at Adama Science and Technology university</small>
-                        </div>
-                    </div>
-                </div>
+                
 
             </div>
         </div>
